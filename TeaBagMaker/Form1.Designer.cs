@@ -33,6 +33,7 @@
             this.btn = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox
@@ -64,12 +65,23 @@
             // timer
             // 
             this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(227, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "2019.05.24 3208 박희경";
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 331);
+            this.ClientSize = new System.Drawing.Size(377, 127);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.comboBox);
@@ -77,6 +89,7 @@
             this.MaximizeBox = false;
             this.Name = "Form";
             this.Text = "TeaBagMaker";
+            this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,6 +101,7 @@
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label1;
     }
 }
 
