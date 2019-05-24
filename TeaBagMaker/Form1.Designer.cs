@@ -1,6 +1,6 @@
 ﻿namespace TeaBagMaker
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,12 +29,65 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.btn = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // comboBox
+            // 
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Location = new System.Drawing.Point(11, 19);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(345, 20);
+            this.comboBox.TabIndex = 0;
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(12, 45);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(345, 25);
+            this.btn.TabIndex = 1;
+            this.btn.Text = "담그기!";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.Btn_Click);
+            // 
+            // textBox
+            // 
+            this.textBox.Location = new System.Drawing.Point(12, 76);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(344, 21);
+            this.textBox.TabIndex = 2;
+            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            // 
+            // Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(499, 331);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.btn);
+            this.Controls.Add(this.comboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form";
+            this.Text = "TeaBagMaker";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
